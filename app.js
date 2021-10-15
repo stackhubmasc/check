@@ -11,6 +11,13 @@ app.get("/",(req,res)=>{
     res.json(responce)
 })
 
+
+
+app.get("/isprime",(req,res)=>{
+     
+    const responce = isPrime(parseInt(req.query.num))
+    res.json(responce)
+})
 app.listen(port,()=>console.log(`Server Running on Port:${port}`))
 
 
